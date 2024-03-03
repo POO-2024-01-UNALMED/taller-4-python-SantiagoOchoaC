@@ -1,8 +1,8 @@
 from classroom.asignatura import Asignatura
 class Grupo:
-    grado = 12
+    grado = "Grado 12"
 
-    def __init__(self, grupo=" grupo predeterminado", asignaturas=None, estudiantes=None): #
+    def __init__(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None): #
         if (asignaturas == None): # Agregamos esto debido a que python solo crea una lista por función. 
             asignaturas = []
         if (estudiantes == None):
@@ -22,7 +22,7 @@ class Grupo:
         self.listadoAlumnos = self.listadoAlumnos + lista
 
     def __str__(self): # Utilizamos el método especial __str__ 
-        salida = "Grupo de estudiantes:" + self._grupo 
+        salida = "Grupo de estudiantes:" +" "+ self._grupo 
         return salida
 
     @ classmethod
